@@ -36,29 +36,6 @@ or
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/asciinema/asciinema-player.css" />
 <script src="{{ site.baseurl }}/assets/asciinema/asciinema-player.min.js"></script>
 <script>
-//AsciinemaPlayer.create(
-//		'{{ site.baseurl }}/assets/asciinema/PowerSession/error.cast'
-//		, document.getElementById('demo')
-//		, {
-//			loop: true
-//			, theme: 'asciinema'
-//			, preload: true
-//			, autoPlay: true
-//			, controls: "auto" // true
-//			, startAt: 12
-//			<!-- 
-//			, poster: 'npt:1:23' 
-//			-->
-//			, fit: 'none'
-//			<!-- 
-//			, terminalFontSize: 'medium'
-//			-->
-//			, terminalFontSize: 'small'
-//			, cols: 127
-//			, rows: 30
-//			, poster: "data:text/plain,I'm regular \x1b[1;32mI'm bold green\x1b[3BI'm 3 lines down'"
-//		}
-//	);
 function A0S_asciinema_play(name) {
 	AsciinemaPlayer.create(
 			'{{ site.baseurl }}/assets/asciinema/PowerSession/'+name+'.cast'
