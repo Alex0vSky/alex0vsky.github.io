@@ -9,4 +9,7 @@ date:   2023-08-17 20:40:17 +0000
 item description page,
 recording animation gif
 ![screenshot](/assets/HelloWinHlslSeascapeTdm.gif)
+
+Fullscreen <kbd>Alt+Enter</kbd>
+
 and a link to [*repo*](https://github.com/Alex0vSky/HelloWinHlslSeascapeTdm/)
