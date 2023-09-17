@@ -45,9 +45,8 @@ function A0S_asciinema_play(name) {
 				, theme: 'asciinema'
 				, preload: true
 				, autoPlay: true
-				, controls: "auto" // true
+				, controls: "auto"
 				, startAt: 12
-				//, fit: 'none'
 				, fit: 'width'
 				, cols: 127
 				, rows: 30
