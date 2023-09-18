@@ -1,0 +1,14 @@
+---
+---
+
+@import 'main';
+
+/* append your custom style below */
+
+#post-list .card .preview-img {
+    margin: 1rem;
+}
+
+#post-list .card .preview-img, #post-list .card .preview-img img {
+    border-radius: 0.5rem;
+}
