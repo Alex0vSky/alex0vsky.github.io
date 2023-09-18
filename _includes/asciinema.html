@@ -8,15 +8,17 @@ function A0S_asciinema_play(name) {
 			'{{ site.baseurl }}/assets/asciinema/PowerSession/'+name+'.cast'
 			, document.getElementById( name )
 			, {
-				loop: true
-				, theme: 'asciinema'
+				theme: 'asciinema'
+				<!-- , loop: true -->
 				, preload: true
-				, autoPlay: true
+				<!-- , autoPlay: true -->
 				, controls: "auto"
-				, startAt: 12
-				, fit: 'width'
-				, cols: 127
-				, rows: 30
+				, startAt: 4
+				<!-- , fit: 'width' -->
+				<!-- , cols: 127 -->
+				<!-- , rows: 30 -->
+				<!-- , poster: "data:text/plain,I'm regular \x1b[3B click to replay console command'" -->
+				, poster: "data:text/plain,click to replay console command"
 			}
 		);
 }

@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: WinApi DirectX 3D HelloWinHlsl
-tags: [WinApi, DirectX, 3D, HelloWinHlsl]
+tags: [DirectX, 3D, HelloWinHlsl]
 title:  "HelloWinHlsl"
 date:   2023-08-17 20:08:52 +0000
 pin: true
@@ -19,6 +19,7 @@ For internal use in available version of DirectX
 - [x] Dx12
 - [ ] get rid of dependence on the boost::pfr library
 - [ ] get rid of dependence on the DirectXTK12 library
+- [ ] to header-only library
 
 
 ### StaticAnalysis

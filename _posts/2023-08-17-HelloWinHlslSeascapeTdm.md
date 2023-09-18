@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: WinApi DirectX 3D HelloWinHlsl
-tags: [WinApi, DirectX, 3D, HelloWinHlsl]
+tags: [DirectX, 3D, HelloWinHlsl]
 title:  "HelloWinHlslSeascapeTdm"
 date:   2023-08-17 20:40:17 +0000
 image:
@@ -13,9 +13,6 @@ image:
 
 item description page,
 recording animation gif
-<!--
-![screenshot](/assets/images/HelloWinHlslSeascapeTdm.gif)
-<!-->
 
 Fullscreen <kbd>Alt+Enter</kbd>
 

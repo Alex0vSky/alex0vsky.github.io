@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: WinApi DirectX 3D HelloWinHlsl
-tags: [WinApi, DirectX, 3D, HelloWinHlsl, Seascape]
+tags: [DirectX, 3D, HelloWinHlsl, Seascape]
 title:  "HelloWinHlslSeascapeJarble"
 date:   2023-09-18 00:02:00 +0000
 image:
