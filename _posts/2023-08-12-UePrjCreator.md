@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: WinApi UnrealEngine 3D
-tags: [WinApi, UnrealEngine, 3D]
+tags: [UnrealEngine]
 title:  "UePrjCreator"
 date: 2023-08-12 00:00:00 +0000
 ---
@@ -85,5 +85,16 @@ https://Alex0vSky.github.io/project-qa-report/UePrjCreator/HtmlReportOcc/index.h
 ## Thanks
 Inspired by video "Unreal Engine C++ Project Setup, From Scratch" of youtube blogger _Alex Forsythe_
 {% include embed/youtube.html id='94FvzO1HVzY' %}
+
+## More
+A series of projects is planned - Unreal Engine for a system developer
+- [x] Fast and easy create new project 
+- [ ] UBT proxy and optimizer, to avoid expensive loading .Net stuff for little action
+- [ ] Minimal Unreal Engine 4 executable
+- [ ] UHT proxy and optimizer
+- [ ] NppCodeAccess plugin 
+- [ ] SublimeCodeAccess plugin 
+
+Trick with GetProcAddress is necessary because I don't know how to link static symbols and use "delay-import" at the same time.
 
 link to [*repo*](https://github.com/Alex0vSky/UePrjCreator/)

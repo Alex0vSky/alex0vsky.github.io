@@ -13,17 +13,22 @@ pin: true
 Windows DirectX Hlsl shader C++ library
 For internal use in available version of DirectX
 
+## TODO
 - [x] Dx9
 - [x] Dx10
 - [x] Dx11
 - [x] Dx12
+- [ ] API documentation
 - [ ] get rid of dependence on the boost::pfr library
 - [ ] get rid of dependence on the DirectXTK12 library
 - [ ] to header-only library
 
+## API documentation
+### TODO(Alex0vSky): makeme
+
+## Reports
 
 ### StaticAnalysis
-
 [![cpplint](https://gist.githubusercontent.com/Alex0vSky/f15941c4c8858c6209ad8800fa810539/raw/GoogleStyle_cpplint.svg)](
 https://Alex0vSky.github.io/project-qa-report/HelloWinHlsl/cpplint.xml
 ) [![cppcheck](https://gist.githubusercontent.com/Alex0vSky/f15941c4c8858c6209ad8800fa810539/raw/StaticAnalysis_cppcheck.svg)](
@@ -44,5 +49,4 @@ https://Alex0vSky.github.io/project-qa-report/HelloWinHlsl/GoogleTestCombinedOut
 https://Alex0vSky.github.io/project-qa-report/HelloWinHlsl/HtmlReportOcc/index.html
 )
 
-item description text, 
-and a link to [*repo*](https://github.com/Alex0vSky/HelloWinHlsl/)
+a link to [*repo*](https://github.com/Alex0vSky/HelloWinHlsl/)
