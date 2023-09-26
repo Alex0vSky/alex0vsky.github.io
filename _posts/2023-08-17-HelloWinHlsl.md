@@ -77,8 +77,8 @@ a link to [*repo*](https://github.com/Alex0vSky/HelloWinHlsl/)
 - [x] Dx11
 - [x] Dx12
 - [ ] API documentation
-- [ ] get rid of dependence on the boost::pfr library
-- [ ] get rid of dependence on the DirectXTK12 library
+- [x] get rid of dependence on the boost::pfr library
+- [x] get rid of dependence on the DirectXTK12 library
 - [ ] to header-only library
 
 ## API documentation
