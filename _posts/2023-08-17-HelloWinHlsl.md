@@ -5,6 +5,8 @@ tags: [DirectX, 3D, HelloWinHlsl]
 title:  "HelloWinHlsl"
 date:   2023-08-17 20:08:52 +0000
 pin: true
+sitemap:
+  priority: 0.6
 ---
 
 ## Hello Windows Hlsl
