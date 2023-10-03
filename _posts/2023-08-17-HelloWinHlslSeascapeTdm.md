@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: WinApi DirectX 3D HelloWinHlsl
-tags: [DirectX, 3D, HelloWinHlsl]
+tags: [DirectX, 3D, HelloWinHlsl, Seascape]
 title:  "HelloWinHlslSeascapeTdm"
 date:   2023-08-17 20:40:17 +0000
 image: /assets/images/HelloWinHlslSeascapeTdm.gif
