@@ -25,7 +25,7 @@ Right off the bat! R&D.
 Just a test **poc** project with minimal code containing a shader for DirectX.
 Just to understand how the minimum works.
 Let's see, the first thing we came across was Hello World: “Direct3D 10 Hello World”
-[https://gist.github.com/Overv/3989887]()
+[https://gist.github.com/Overv/3989887](https://gist.github.com/Overv/3989887)
 
 There is a version of the *API* platform *DirectX10/Dx10Direct3D* or simply *Dx10*.
 > Make sure we support this version of the *API* using this tool:
@@ -78,7 +78,7 @@ There are many of them and the particle system there is also beautiful.
 The project is easy to compile/build, but difficult to understand its architecture and its own shader language.
 
 ## Forward movement
-Based on [https://www.shadertoy.com/view/tlXXzs]()
+Based on [https://www.shadertoy.com/view/tlXXzs](https://www.shadertoy.com/view/tlXXzs)
 ...
 SDF
 ...
@@ -121,7 +121,7 @@ Link to code from my repo with anchor on the desired line.
 
 ## Manual for converting from GLSL to HLSL
 This will be quite enough, we will use it as a reference:
-[https://gamedeveloper.com/programming/state-of-the-art-hlsl-to-glsl-converter]()
+[https://gamedeveloper.com/programming/state-of-the-art-hlsl-to-glsl-converter](https://gamedeveloper.com/programming/state-of-the-art-hlsl-to-glsl-converter)
 
 <br/>
 <br/>
