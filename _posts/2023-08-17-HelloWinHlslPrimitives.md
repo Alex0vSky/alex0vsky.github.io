@@ -25,7 +25,7 @@ Right off the bat! R&D.
 Just a test **poc** project with minimal code containing a shader for DirectX.
 Just to understand how the minimum works.
 Let's see, the first thing we came across was Hello World: “Direct3D 10 Hello World”
-[https://gist.github.com/Overv/3989887](https://gist.github.com/Overv/3989887)
+<https://gist.github.com/Overv/3989887>
 
 There is a version of the *API* platform *DirectX10/Dx10Direct3D* or simply *Dx10*.
 > Make sure we support this version of the *API* using this tool:
@@ -76,7 +76,7 @@ Here's something that's easy to compile/build and might inspire you to take furt
 - In my opinion, the example with a particle system from the examples *directx-sdk-samples* is called
 [NBodyGravityCS11](https://github.com/walbourn/directx-sdk-samples/tree/main/NBodyGravityCS11) looks exciting.
 The example was kindly posted in the repository, and the repository is kindly maintained by *Chuck Walborn*;
-- Also don't ignore the excellent examples from [bgfx](https://github.com/bkaradzic/bgfx),
+- Also don't ignore the excellent examples from [bgfx](https://bkaradzic.github.io/bgfx/examples.html#nbody),
 There are many of them and the particle system there is also beautiful.
 The project is easy to compile/build, but difficult to understand its architecture and its own shader language.
 
@@ -122,10 +122,11 @@ And yes, the topic of shader compilation and, for example, *DirectXShaderCompile
 So below you can see the results.
 At the same time, the entry point `main` is not presented, because this post turned out to be big anyway,
 secondly, in addition to the `uv` transformation, there are simply function calls.
-Everything can be viewed in the repo, for example for
+Everything can be viewed in the repo in `resource` directory, for example for
 [Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L65)
 
 ### Rectangle
+The `rectangle` function from [Necromurloc - Basic 2D primitive](https://www.shadertoy.com/view/tlXXzs).
 Was `float` became `float1`.
 Was `vec2` became `float2`.
 Was `vec2(0.0)` became `float2(0.0, 0.0)`.
@@ -135,13 +136,14 @@ float1 rectangle(in float2 uv, in float2 size2, in float2 off) {
 	return d.x * d.y;
 }
 ```
-For all versions of *Dx* everything is the same, only for *Dx9* the old format there is a constant for screen sizes:
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
 [Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L5)
 , [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L6)
 , [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L6)
 , [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L6)
 
 ### Square
+The `quad` function from [Necromurloc - Basic 2D primitive](https://www.shadertoy.com/view/tlXXzs).
 Was `float` became `float1`.
 Was `vec2` became `float2`.
 Was `vec2(0.0)` became `float2(0.0, 0.0)`.
@@ -151,13 +153,14 @@ float1 quad(in float2 uv, float1 size1, in float2 off) {
 	return d.x * d.y;
 }
 ```
-For all versions of *Dx* everything is the same, only for *Dx9* the old format there is a constant for screen sizes:
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
 [Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L10)
 , [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L11)
 , [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L11)
 , [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L11)
 
 ### Circle
+The `circle` function from [Necromurloc - Basic 2D primitive](https://www.shadertoy.com/view/tlXXzs).
 Was `float` became `float1`.
 Was `vec2` became `float2`.
 ```hlsl
@@ -166,16 +169,18 @@ float1 circle(in float2 uv, float1 radius, in float2 off) {
 	return step(dot(d, d), radius * radius);
 }
 ```
-For all versions of *Dx* everything is the same, only for *Dx9* the old format there is a constant for screen sizes:
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
 [Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L15)
 , [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L16)
 , [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L16)
 , [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L16)
 
 ### Line
+It's interesting that a simple line requires a lot of code.
+
+The `line` function from [Necromurloc - Basic 2D primitive](https://www.shadertoy.com/view/tlXXzs).
 Was `float` became `float1`.
 Was `vec2` became `float2`.
-It's interesting that a simple line requires a lot of code.
 ```hlsl
 float1 line_(float2 uv, float2 p0, float2 p1, float1 pointSize) {
 	float2 line__ = p1 - p0;
@@ -189,30 +194,130 @@ float1 line_(float2 uv, float2 p0, float2 p1, float1 pointSize) {
 	return step(dot(dir, dir) - pointSize, pointSize);
 }
 ```
-For all versions of *Dx* everything is the same, only for *Dx9* the old format there is a constant for screen sizes:
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
 [Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L20)
 , [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L21)
 , [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L21)
 , [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L21)
 
 ### Polygon
-Blah blah
-Link to code from my repo with anchor on the desired line.
-> Under construction
-{: .prompt-warning }
+Not a simple element.
+I had to look around and remember: *polar* coordinate system; geometric functions.
+I started from here
+<https://thebookofshaders.com/07/>.
+Come in and look at the illustrations to get aesthetic pleasure from the illustrations and presentation of the material,
+if you haven't seen this tutorial yet.
+
+I had to pull the code from the *main* tutorial into a separate function for convenience.
+I will not describe all the conversion renamings.
+
+For example, a hexagon, we pass the value *6* for the `N` argument to the `polygonViaPolar` function:
+```hlsl
+#define PI 3.14159265359
+#define TWO_PI 6.28318530718
+float1 polygonViaPolar(in float2 uv, float1 size1, in float2 off, in int N) {
+	uv = off - uv;
+	float1 a = atan2( uv.x,uv.y ) + PI;
+	float1 r = TWO_PI / float1(N);
+	float1 d = cos(floor(0.5 + a / r) * r - a) * length(uv);
+	return smoothstep( 0.41, 0.4, d / size1 );
+}
+float1 hexagonViaPolar(in float2 uv, float1 size1, in float2 off) {
+	return polygonViaPolar( uv, size1, off, 6 );
+}
+```
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
+[Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L32)
+, [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L33)
+, [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L33)
+, [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L33)
 
 ### Triangle
-Blah blah
-Link to code from my repo with anchor on the desired line.
-> Under construction
-{: .prompt-warning }
+The heaviest element, and it would seem that in *3D* everything consists of it.
+But with shaders everything is different, it's fun.
+Geometry lovers will immediately say that a triangle is a polygon of three vertices,
+and there is already a code for the polygon.
+What if it's not productive?
+And besides, it uses *polar* coordinates, this may not be at all useful when your head is full of other things.
+
+#### First option
+Here is the first option, based on the coordinates of the vertices.
+Shader used [Simple 2D Triangle](https://www.shadertoy.com/view/4s3fzj),
+created by [Rafbeam](https://www.shadertoy.com/user/Rafbeam) on 2018-05-09.
+
+Was `float` became `float1`.
+Was `vec2`, became `float2`.
+Was `vec3`, became `float3`.
+And some renaming of functions.
+```hlsl
+float1 triangleViaVertsAux_(float2 p1, float2 p2, float2 p3) {
+    return (p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y);
+}
+float3 triangleViaVerts(float3 color, float3 background, float2 vertices[3], float2 uv) {
+    bool b1 = triangleViaVertsAux_(uv, vertices[0], vertices[1]) < 0.0f;
+    bool b2 = triangleViaVertsAux_(uv, vertices[1], vertices[2]) < 0.0f;
+    bool b3 = triangleViaVertsAux_(uv, vertices[2], vertices[0]) < 0.0f;
+    if((b1 == b2) && (b2 == b3))return color;
+    return background;
+}
+float4 main(in float2 position : VPOS) : COLOR {
+	// ...
+	shape += triangleViaPolar(uv, 0.2, float2(0.9, 0.9));
+	// ...
+	float3 background = float3(0.0, 0.0, 0.0);
+	float1 x_ = 0.6, y_ = 0.2;
+	float2 VERTS[] = {
+			float2(x_ + 0.5, y_ + 0.75)
+			, float2(x_ + 0.3, y_ + 0.25)
+			, float2(x_ + 0.7, y_ + 0.25)
+		};
+	shape += triangleViaVerts( float3(1.0, 1.0, 1.0), background, VERTS, uv );
+	// ...
+}
+```
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
+[Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L51)
+, [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L52)
+, [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L52)
+, [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L52)
+
+#### Second option
+Here is the second option, in polar coordinates:
+```hlsl
+#define PI 3.14159265359
+#define TWO_PI 6.28318530718
+float1 polygonViaPolar(in float2 uv, float1 size1, in float2 off, in int N) {
+	uv = off - uv;
+	float1 a = atan2( uv.x,uv.y ) + PI;
+	float1 r = TWO_PI / float1(N);
+	float1 d = cos(floor(0.5 + a / r) * r - a) * length(uv);
+	return smoothstep( 0.41, 0.4, d / size1 );
+}
+float1 triangleViaPolar(in float2 uv, float1 size1, in float2 off) {
+	return polygonViaPolar( uv, size1, off, 3 );
+}
+```
+For all versions of *Dx* everything is the same, only for *Dx9* the screen size constant in the old format is used:
+[Dx9](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx9.hlsl#L32)
+, [Dx10](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx10.hlsl#L33)
+, [Dx11](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx11.hlsl#L33)
+, [Dx12](https://github.com/Alex0vSky/HelloWinHlslPrimitives/blob/main/resource/primitives_ps_Dx12.hlsl#L33)
+
+#### Other publications used
+- [Basic Shape:Triangle](https://www.shadertoy.com/view/XlBBWt) Created by [cailven](https://www.shadertoy.com/user/cailven) in in 2018-02-01
+- [Triangle Example](https://www.shadertoy.com/view/MlySzw) Created by [Heavybrush](https://www.shadertoy.com/user/Heavybrush) in in 2017-01-04
+
+### Caution!
+Everything was so simple, we just renamed the types.
+This isn't always the case, the biggest mistake/pitfall I've seen with conversions is differences in the *multiplication* rules.
 
 ## Roadmap/Todo
 Measure the output performance of each primitive.
 
 ## Manual for converting from GLSL to HLSL
 This will be quite enough, we will use it as a reference:
-[https://gamedeveloper.com/programming/state-of-the-art-hlsl-to-glsl-converter](https://gamedeveloper.com/programming/state-of-the-art-hlsl-to-glsl-converter)
+<https://gamedeveloper.com/programming/state-of-the-art-hlsl-to-glsl-converter>
+<https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/>
 
 <br/>
 <br/>
