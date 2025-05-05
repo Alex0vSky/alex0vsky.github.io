@@ -197,6 +197,14 @@ defaults:
       permalink: /:title/
   # Not working!!!
   - scope:
+      path:            "tags"
+    values:
+      sitemap:         false
+  - scope:
+      path:            "categories"
+    values:
+      sitemap:         false
+  - scope:
       path:            'tags*'
     values:
       sitemap:         false
@@ -236,12 +244,12 @@ exclude:
   - rollup.config.js
   - "package*.json"
 
-# ### Conflict to sitemap exclusion !!!
-# jekyll-archives:
-  # enabled: [categories, tags]
-  # layouts:
-    # category: category
-    # tag: tag
-  # permalinks:
-    # tag: /tags/:name/
-    # category: /categories/:name/
+### Conflict to sitemap exclusion !!!
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
