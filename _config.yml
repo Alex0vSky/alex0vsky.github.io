@@ -195,6 +195,23 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  # Not working!!!
+  - scope:
+      path:            'tags*'
+    values:
+      sitemap:         false
+  - scope:
+      path:            'categories*'
+    values:
+      sitemap:         false
+  - scope:
+      path:            'page*'
+    values:
+      sitemap:         false
+  - scope:
+      path:            'archives*'
+    values:
+      sitemap:         false
 
 sass:
   style: compressed
@@ -219,11 +236,12 @@ exclude:
   - rollup.config.js
   - "package*.json"
 
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+# ### Conflict to sitemap exclusion !!!
+# jekyll-archives:
+  # enabled: [categories, tags]
+  # layouts:
+    # category: category
+    # tag: tag
+  # permalinks:
+    # tag: /tags/:name/
+    # category: /categories/:name/
